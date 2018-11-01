@@ -1,0 +1,10 @@
+
+Turn 10
+================================================================
+warning: entity 7 was directed to use 26 halite to move east, but only 0 halite was available
+At command 4 of 5:
+    2   m 2 e
+    3   m 5 o
+>>> 4   m 7 e
+    5   g
+

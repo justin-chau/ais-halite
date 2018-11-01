@@ -1,0 +1,85 @@
+
+Turn 3
+================================================================
+warning: entity 1 was directed to use 2 halite to move north, but only 0 halite was available
+At command 1 of 2:
+>>> 1   m 1 n
+    2   g
+
+
+Turn 40
+================================================================
+warning: entity 1 was directed to use 2 halite to move north, but only 0 halite was available
+At command 2 of 2:
+    1   m 3 e
+>>> 2   m 1 n
+
+
+Turn 44
+================================================================
+warning: entity 5 was directed to use 1 halite to move north, but only 0 halite was available
+At command 3 of 3:
+    1   m 3 s
+    2   m 1 o
+>>> 3   m 5 n
+
+
+Turn 82
+================================================================
+warning: entity 3 was directed to use 2 halite to move east, but only 0 halite was available
+At command 3 of 3:
+    1   m 5 e
+    2   m 1 w
+>>> 3   m 3 e
+
+
+Turn 92
+================================================================
+warning: entity 5 was directed to use 1 halite to move east, but only 0 halite was available
+At command 1 of 4:
+>>> 1   m 5 e
+    2   m 3 o
+    3   m 1 o
+
+
+Turn 137
+================================================================
+warning: entity 12 was directed to use 1 halite to move west, but only 0 halite was available
+At command 2 of 5:
+    1   m 1 n
+>>> 2   m 12 w
+    3   m 8 n
+    4   m 5 o
+
+
+Turn 154
+================================================================
+warning: entity 5 was directed to use 1 halite to move west, but only 0 halite was available
+At command 3 of 6:
+    1   m 1 o
+    2   m 12 e
+>>> 3   m 5 w
+    4   m 13 o
+    5   m 8 o
+
+
+Turn 157
+================================================================
+warning: entity 5 was directed to use 5 halite to move west, but only 2 halite was available
+At command 2 of 6:
+    1   m 3 o
+>>> 2   m 5 w
+    3   m 13 e
+    4   m 1 w
+
+
+Turn 255
+================================================================
+warning: entity 3 was directed to use 1 halite to move west, but only 0 halite was available
+At command 5 of 9:
+    3   m 19 o
+    4   m 15 w
+>>> 5   m 3 w
+    6   m 5 o
+    7   m 13 o
+

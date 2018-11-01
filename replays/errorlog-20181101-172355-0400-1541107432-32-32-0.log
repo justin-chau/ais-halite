@@ -1,0 +1,8 @@
+
+Turn 3
+================================================================
+warning: entity 0 was directed to use 7 halite to move north, but only 0 halite was available
+At command 1 of 2:
+>>> 1   m 0 n
+    2   g
+

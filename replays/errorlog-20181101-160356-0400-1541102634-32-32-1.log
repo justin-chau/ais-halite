@@ -1,0 +1,86 @@
+
+Turn 8
+================================================================
+warning: owned entities 6, 4 collided on cell (22, 16) as the result of moves on this turn
+At command 4 of 4:
+    2   m 3 o
+    3   m 4 o
+>>> 4   m 6 w
+
+
+Turn 40
+================================================================
+warning: entity 1 was directed to use 8 halite to move south, but only 0 halite was available
+At command 2 of 3:
+    1   m 3 n
+>>> 2   m 1 s
+    3   m 7 o
+
+
+Turn 45
+================================================================
+warning: entity 3 was directed to use 6 halite to move east, but only 0 halite was available
+At command 3 of 4:
+    1   m 1 o
+    2   m 7 n
+>>> 3   m 3 e
+    4   g
+
+
+Turn 47
+================================================================
+warning: entity 13 was directed to use 7 halite to move south, but only 0 halite was available
+At command 2 of 4:
+    1   m 1 o
+>>> 2   m 13 s
+    3   m 3 n
+    4   m 7 n
+
+
+Turn 48
+================================================================
+warning: entity 3 was directed to use 7 halite to move north, but only 0 halite was available
+At command 3 of 4:
+    1   m 1 o
+    2   m 13 e
+>>> 3   m 3 n
+    4   m 7 o
+
+
+Turn 50
+================================================================
+warning: entity 13 was directed to use 9 halite to move south, but only 0 halite was available
+At command 4 of 4:
+    2   m 1 o
+    3   m 3 n
+>>> 4   m 13 s
+
+
+Turn 51
+================================================================
+warning: entity 3 was directed to use 5 halite to move west, but only 0 halite was available
+At command 4 of 4:
+    2   m 13 e
+    3   m 7 s
+>>> 4   m 3 w
+
+
+Turn 54
+================================================================
+warning: entity 13 was directed to use 9 halite to move north, but only 2 halite was available
+At command 2 of 4:
+    1   m 3 o
+>>> 2   m 13 n
+    3   m 7 n
+    4   m 1 o
+
+
+Turn 55
+================================================================
+warning: owned entities 13, 1 collided on cell (22, 18) as the result of moves on this turn
+At command 2 of 4:
+    1   m 3 o
+>>> 2   m 13 s
+    3   m 1 o
+    4   m 7 n
+

@@ -1,0 +1,86 @@
+
+Turn 3
+================================================================
+warning: entity 0 was directed to use 2 halite to move north, but only 0 halite was available
+At command 1 of 2:
+>>> 1   m 0 n
+    2   g
+
+
+Turn 52
+================================================================
+warning: entity 2 was directed to use 2 halite to move west, but only 0 halite was available
+At command 3 of 4:
+    1   m 4 e
+    2   m 0 o
+>>> 3   m 2 w
+    4   g
+
+
+Turn 62
+================================================================
+warning: entity 4 was directed to use 1 halite to move east, but only 0 halite was available
+At command 4 of 5:
+    2   m 2 s
+    3   m 6 o
+>>> 4   m 4 e
+    5   g
+
+
+Turn 64
+================================================================
+warning: entity 7 was directed to use 2 halite to move west, but only 0 halite was available
+At command 5 of 5:
+    3   m 6 o
+    4   m 4 o
+>>> 5   m 7 w
+
+
+Turn 112
+================================================================
+warning: entity 2 was directed to use 1 halite to move south, but only 0 halite was available
+At command 6 of 7:
+    4   m 9 o
+    5   m 4 w
+>>> 6   m 2 s
+    7   g
+
+
+Turn 123
+================================================================
+warning: entity 4 was directed to use 1 halite to move east, but only 0 halite was available
+At command 7 of 7:
+    5   m 6 o
+    6   m 7 e
+>>> 7   m 4 e
+
+
+Turn 127
+================================================================
+warning: entity 7 was directed to use 2 halite to move east, but only 0 halite was available
+At command 7 of 8:
+    5   m 6 o
+    6   m 4 o
+>>> 7   m 7 e
+    8   m 11 e
+
+
+Turn 182
+================================================================
+warning: entity 2 was directed to use 1 halite to move west, but only 0 halite was available
+At command 11 of 12:
+    9   m 9 o
+    10   m 0 o
+>>> 11   m 2 w
+    12   m 18 n
+
+
+Turn 368
+================================================================
+error: failed to decode bot message: "T" (at position 1)
+Last input received was:
+Traceback (most recent call last):
+  File "MyBot.py", line 40, in <module>
+    if not cell.is_occupied and cell.position is not ship.position:
+AttributeError: 'NoneType' object has no attribute 'is_occupied'
+

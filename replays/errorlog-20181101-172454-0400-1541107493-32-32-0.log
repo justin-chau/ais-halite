@@ -1,0 +1,18 @@
+
+Turn 8
+================================================================
+warning: entity 2 was directed to use 3 halite to move south, but only 0 halite was available
+At command 1 of 2:
+>>> 1   m 2 s
+    2   m 0 o
+
+
+Turn 34
+================================================================
+error: failed to decode bot message: "T" (at position 1)
+Last input received was:
+Traceback (most recent call last):
+  File "MyBot.py", line 25, in <module>
+    if (ship.halite_amount > 500) and (game_map[me.shipyard.position].is_empty()):
+TypeError: 'bool' object is not callable
+

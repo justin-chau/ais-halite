@@ -11,11 +11,8 @@ game = hlt.Game()
 # At this point "game" variable is populated with initial map data.
 # This is a good place to do computationally expensive start-up pre-processing.
 # As soon as you call "ready" function below, the 2 second per turn timer will start.
-game.ready("Old-Bot")
-
-# Now that your bot is initialized, save a message to yourself in the log file with some important information.
-#   Here, you log here your id, which you can always fetch from the game object by using my_id.
-logging.info("Successfully created bot! My Player ID is {}.".format(game.my_id))
+game.ready("Respawn-Halite")
+logging.info("Initialized! ID = {}.".format(game.my_id))
 
 """ <<<Game Loop>>> """
 
@@ -25,23 +22,29 @@ while True:
     me = game.me
     game_map = game.game_map
 
-    # A command queue holds all the commands you will run this turn. You build this list up and submit it at the
-    #   end of the turn.
+    # A command queue holds all the commands you will run this turn. You build this list up and submit it at the end of the turn.
     command_queue = []
 
     for ship in me.get_ships():
-        # For each of your ships, move randomly if the ship is on a low halite location or the ship is full.
-        # Else, collect halite.
-        if game_map[ship.position].halite_amount < constants.MAX_HALITE / 10 or ship.is_full:
-            command_queue.append(
-                ship.move(
-                    random.choice([ Direction.North, Direction.South, Direction.East, Direction.West ])))
+        if (ship.halite_amount > 500) or ((ship.position is me.shipyard.position) and ship.halite_amount > 30):
+            command_queue.append(ship.move(game_map.naive_navigate(ship, me.shipyard.position)))
         else:
-            command_queue.append(ship.stay_still())
+            max_halite_position = ship.position
+            max_halite_value = game_map[ship.position].halite_amount
+
+            for position in ship.position.get_surrounding_cardinals():
+                if game_map[position].halite_amount * 0.125 > max_halite_value * 0.25:
+                    max_halite_position = position
+                    max_halite_value = game_map[position].halite_amount
+
+            if (max_halite_position is not ship.position):
+                command_queue.append(ship.move(game_map.naive_navigate(ship, max_halite_position)))
+            else:
+                command_queue.append(ship.stay_still())
 
     # If the game is in the first 200 turns and you have enough halite, spawn a ship.
     # Don't spawn a ship if you currently have a ship at port, though - the ships will collide.
-    if game.turn_number <= 200 and me.halite_amount >= constants.SHIP_COST and not game_map[me.shipyard].is_occupied:
+    if game.turn_number <= 200 and me.halite_amount >= constants.SHIP_COST+3000 and not game_map[me.shipyard].is_occupied:
         command_queue.append(me.shipyard.spawn())
 
     # Send your moves back to the game environment, ending this turn.
