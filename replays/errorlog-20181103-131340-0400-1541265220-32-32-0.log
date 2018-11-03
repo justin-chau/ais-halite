@@ -1,0 +1,12 @@
+
+Turn 2
+================================================================
+error: failed to decode bot message: "T" (at position 1)
+Last input received was:
+Traceback (most recent call last):
+  File "MyBot.py", line 79, in <module>
+    set_long_target(ship)
+  File "MyBot.py", line 64, in set_long_target
+    set_short_target(long_targets[ship.id]['target'])
+TypeError: set_short_target() missing 1 required positional argument: 'target'
+

@@ -1,0 +1,10 @@
+
+Turn 1
+================================================================
+error: communication error with bot: Problem writing to pipe, errno was: 0 (No error)
+Last input received was:
+
+    if prospect_distance < min_distance and not in is_in_short_targets(prospect_position):
+                                                 ^
+SyntaxError: invalid syntax
+

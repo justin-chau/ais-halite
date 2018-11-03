@@ -1,33 +1,54 @@
 import hlt
-
-from hlt import constants
-from hlt.positionals import Direction
-import random
 import logging
+from hlt import constants
+from hlt import Position
+from hlt.positionals import Direction
 
 """ <<<Game Begin>>> """
 
 game = hlt.Game()
-# At this point "game" variable is populated with initial map data.
-# This is a good place to do computationally expensive start-up pre-processing.
-# As soon as you call "ready" function below, the 2 second per turn timer will start.
-game.ready("Respawn-Halite")
+# Ready, starts 2 second timer per turn.
+game.ready("Justin-AIS-Halite-V1")
 logging.info("Initialized! ID = {}.".format(game.my_id))
 
 """ <<<Game Loop>>> """
 
+longterm_targets = {} # dict with ship id as key, with target position and how many turns to get there.
+shortterm_targets = {} # dict with ship id as key, with next position stored.
+
+def find_best_move(ship):
+    best_position = ship.position
+    best_value = 0
+    logging.info("finding best move...")
+    for y in range(game_map.height):
+        for x in range(game_map.width):
+            cell = game_map[hlt.Position(x, y)]
+            if not(cell.is_occupied) and (cell.position is not ship.position):
+                cell_value = cell.halite_amount / game_map.calculate_distance(ship.position, cell.position)
+                if cell_value > best_value:
+                    best_value = cell_value
+                    best_position = cell.position
+            
+    return best_position
+
 while True:
     game.update_frame()
-    # You extract player metadata and the updated map metadata here for convenience.
     me = game.me
     game_map = game.game_map
+    current_halite = me.halite_amount
 
-    # A command queue holds all the commands you will run this turn. You build this list up and submit it at the end of the turn.
+    # Holds commands, submitted at the end of turn. 
     command_queue = []
+    
 
     for ship in me.get_ships():
-        if (ship.halite_amount > 500) or ((ship.position is me.shipyard.position) and ship.halite_amount > 30):
-            command_queue.append(ship.move(game_map.naive_navigate(ship, me.shipyard.position)))
+
+
+        if (ship.halite_amount > 750) and not game_map[me.shipyard.position].is_occupied:
+            # if (me.halite_amount >= constants.DROPOFF_COST+5000) and (game_map.calculate_distance(ship.position, me.shipyard.position) > 30):
+            #     command_queue.append(ship.make_dropoff())
+            # else:
+                command_queue.append(ship.move(game_map.naive_navigate(ship, me.shipyard.position)))
         else:
             max_halite_position = ship.position
             max_halite_value = game_map[ship.position].halite_amount
@@ -37,16 +58,16 @@ while True:
                     max_halite_position = position
                     max_halite_value = game_map[position].halite_amount
 
+            if max_halite_value is 0:
+                max_halite_position = find_best_move(ship)
+
             if (max_halite_position is not ship.position):
                 command_queue.append(ship.move(game_map.naive_navigate(ship, max_halite_position)))
             else:
                 command_queue.append(ship.stay_still())
 
-    # If the game is in the first 200 turns and you have enough halite, spawn a ship.
-    # Don't spawn a ship if you currently have a ship at port, though - the ships will collide.
-    if game.turn_number <= 200 and me.halite_amount >= constants.SHIP_COST+3000 and not game_map[me.shipyard].is_occupied:
+    if game.turn_number <= 200 and me.halite_amount >= constants.SHIP_COST and not game_map[me.shipyard].is_occupied:
         command_queue.append(me.shipyard.spawn())
 
-    # Send your moves back to the game environment, ending this turn.
+    # End turn.
     game.end_turn(command_queue)
-
