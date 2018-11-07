@@ -1,0 +1,11 @@
+
+Turn 378
+================================================================
+warning: owned entities 20, 0 collided on cell (31, 13) as the result of moves on this turn
+At command 9 of 18:
+    7   m 16 o
+    8   m 18 s
+>>> 9   m 20 w
+    10   m 28 o
+    11   m 32 o
+

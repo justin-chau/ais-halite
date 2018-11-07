@@ -1,0 +1,18 @@
+
+Turn 272
+================================================================
+warning: owned entities 18, 28 collided on cell (31, 18) as the result of moves on this turn
+At command 10 of 28:
+    8   m 11 o
+    9   m 16 s
+>>> 10   m 18 n
+    11   m 20 e
+    12   m 21 o
+
+Other commands that placed an entity on this cell:
+    13   m 25 o
+    14   m 26 o
+>>> 15   m 28 w
+    16   m 30 o
+    17   m 34 o
+

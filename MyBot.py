@@ -24,17 +24,17 @@ def find_best_position(ship):
             current_targets.append(path[len(path)-1])
 
     for position in ship.position.get_surrounding_cardinals():
-        if position not in current_targets:
+        if game_map.normalize(position) not in current_targets:
             if game_map[position].halite_amount * 0.125 > max_halite_value * 0.25:
                 optimal_position = position
                 max_halite_value = game_map[position].halite_amount
 
-    if max_halite_value < 30:
+    if max_halite_value == 0:
         max_halite_value = 0
         for y in range(game_map.height):
             for x in range(game_map.width):
                 cell = game_map[hlt.Position(x, y)]
-                if not cell.is_occupied and cell.position is not ship.position and cell.position not in current_targets:
+                if not cell.is_occupied and cell.position is not ship.position and game_map.normalize(cell.position) not in current_targets:
                     cell_value = cell.halite_amount / game_map.calculate_distance(ship.position, cell.position)
                     if cell_value > max_halite_value:
                         max_halite_value = cell_value
@@ -44,11 +44,11 @@ def find_best_position(ship):
     return game_map.normalize(optimal_position)
 
 def a_star(start, target):
-    target_tuple = pos_to_tuple(target)
+    target_tuple = pos_to_tuple(game_map.normalize(target))
     frontier = Queue()
-    frontier.put(pos_to_tuple(start))
+    frontier.put(pos_to_tuple(game_map.normalize(start)))
     came_from = {}
-    came_from[pos_to_tuple(start)] = None
+    came_from[pos_to_tuple(game_map.normalize(start))] = None
 
     while not frontier.empty():
         current = frontier.get()
@@ -57,18 +57,18 @@ def a_star(start, target):
             break
 
         for next in Position(current[0], current[1]).get_surrounding_cardinals():
-            if pos_to_tuple(next) not in came_from:
-                frontier.put(pos_to_tuple(next))
-                came_from[pos_to_tuple(next)] = current
+            if pos_to_tuple(game_map.normalize(next)) not in came_from:
+                frontier.put(pos_to_tuple(game_map.normalize(next)))
+                came_from[pos_to_tuple(game_map.normalize(next))] = current
 
-    current = pos_to_tuple(target)
+    current = pos_to_tuple(game_map.normalize(target))
     path = []
 
-    while current != pos_to_tuple(start):
+    while current != pos_to_tuple(game_map.normalize(start)):
         path.append(current)
         current = came_from[current]
     
-    path.append(pos_to_tuple(start))
+    path.append(pos_to_tuple(game_map.normalize(start)))
     path.reverse()
 
     position_path = []
@@ -128,7 +128,7 @@ while True:
     for player in players:
         if player != game.my_id:
             for ship in players[player].get_ships():
-                opposing_locations.append(ship.position)
+                opposing_locations.append(game_map.normalize(ship.position))
 
     logging.info("Current Paths (Turn Start): {}".format(ship_paths))
 
@@ -148,9 +148,9 @@ while True:
     for ship_id in ship_paths:
         if me.has_ship(ship_id):
             if can_move_off(me.get_ship(ship_id)) and len(ship_paths[ship_id]) > 0:
-                next_positions[ship_id] = ship_paths[ship_id][0]
+                next_positions[ship_id] = game_map.normalize(ship_paths[ship_id][0])
             else:
-                next_positions[ship_id] = me.get_ship(ship_id).position
+                next_positions[ship_id] = game_map.normalize(me.get_ship(ship_id).position)
     
     logging.info("Next Positions: {}".format(next_positions))
 
