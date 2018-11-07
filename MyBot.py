@@ -162,7 +162,7 @@ while True:
 
     for ship_id in next_positions:
         if ship_id not in next_adj_positions:
-            if next_positions[ship_id] in next_adj_positions.values() or next_positions[ship_id] in opposing_locations:
+            if next_positions[ship_id] in next_adj_positions.values() or (next_positions[ship_id] in opposing_locations and next_positions[ship_id] != me.shipyard.position):
                 if me.get_ship(ship_id).position in next_adj_positions.values():
                     for position in me.get_ship(ship_id).position.get_surrounding_cardinals():
                         if position not in next_adj_positions.values():
