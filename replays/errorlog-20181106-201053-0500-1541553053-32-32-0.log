@@ -1,0 +1,16 @@
+
+Turn 2
+================================================================
+error: failed to decode bot message: "T" (at position 1)
+Last input received was:
+Traceback (most recent call last):
+  File "MyBot.py", line 94, in <module>
+    navigate(ship, find_best_position(ship))
+  File "MyBot.py", line 77, in navigate
+    ship_paths[ship.id] = a_star(ship.position, target)
+  File "MyBot.py", line 66, in a_star
+    position_path.append(tuple_to_pos(position))
+  File "MyBot.py", line 74, in tuple_to_pos
+    return Position(tup[0], tup[1])
+TypeError: 'Position' object does not support indexing
+

@@ -79,12 +79,6 @@ class Ship(Entity):
         """
         return "{} {} {}".format(commands.MOVE, self.id, commands.STAY_STILL)
 
-    def set_target(self, target):
-        self.target = target
-    
-    def get_target(self):
-        return self.target
-
     @staticmethod
     def _generate(player_id):
         """

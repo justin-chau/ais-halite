@@ -1,0 +1,10 @@
+
+Turn 1
+================================================================
+error: communication error with bot: Problem writing to pipe, errno was: 0 (No error)
+Last input received was:
+
+    if (ship.halite_amount > 750) and not game_map[me.shipyard.position].is_occupied:
+    ^
+IndentationError: expected an indented block
+
