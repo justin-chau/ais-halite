@@ -1,0 +1,40 @@
+
+Turn 71
+================================================================
+warning: owned entities 5, 11 collided on cell (2, 12) as the result of moves on this turn
+At command 3 of 8:
+    1   m 0 e
+    2   m 3 e
+>>> 3   m 5 w
+    4   m 7 w
+    5   m 9 o
+
+
+Turn 86
+================================================================
+warning: owned entities 15, 13 collided on cell (31, 12) as the result of moves on this turn
+At command 6 of 7:
+    4   m 9 n
+    5   m 13 o
+>>> 6   m 15 w
+    7   m 16 w
+
+
+Turn 92
+================================================================
+warning: owned entities 16, 0 collided on cell (31, 14) as the result of moves on this turn
+At command 5 of 6:
+    3   m 7 w
+    4   m 9 w
+>>> 5   m 16 w
+    6   m 17 n
+
+
+Turn 216
+================================================================
+warning: owned entities 26, 30 collided on cell (8, 16) as the result of moves on this turn
+At command 2 of 3:
+    1   m 20 o
+>>> 2   m 26 e
+    3   m 30 o
+

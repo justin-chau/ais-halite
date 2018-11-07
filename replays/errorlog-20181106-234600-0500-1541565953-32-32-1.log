@@ -1,0 +1,11 @@
+
+Turn 72
+================================================================
+warning: entity 12 was directed to use 1 halite to move west, but only 0 halite was available
+At command 3 of 7:
+    1   m 8 s
+    2   m 1 s
+>>> 3   m 12 w
+    4   m 4 o
+    5   m 2 n
+

@@ -1,0 +1,11 @@
+
+Turn 184
+================================================================
+warning: owned entities 37, 41 collided on cell (16, 16) as the result of moves on this turn
+At command 15 of 20:
+    13   m 30 s
+    14   m 34 o
+>>> 15   m 37 w
+    16   m 41 o
+    17   m 42 o
+

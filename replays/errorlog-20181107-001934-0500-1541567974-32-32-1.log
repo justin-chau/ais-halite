@@ -1,0 +1,8 @@
+
+Turn 3
+================================================================
+warning: entity 1 was directed to use 12 halite to move south, but only 0 halite was available
+At command 1 of 2:
+>>> 1   m 1 s
+    2   g
+

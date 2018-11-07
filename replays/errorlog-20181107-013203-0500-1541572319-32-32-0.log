@@ -1,0 +1,22 @@
+
+Turn 94
+================================================================
+warning: owned entities 0, 9 collided on cell (31, 18) as the result of moves on this turn
+At command 8 of 12:
+    6   m 18 o
+    7   m 21 o
+>>> 8   m 0 w
+    9   m 3 o
+    10   m 13 e
+
+
+Turn 121
+================================================================
+warning: owned entities 3, 18 collided on cell (31, 16) as the result of moves on this turn
+At command 7 of 11:
+    5   m 24 o
+    6   m 27 o
+>>> 7   m 3 n
+    8   m 5 w
+    9   m 7 s
+

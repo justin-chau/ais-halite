@@ -1,0 +1,19 @@
+
+Turn 49
+================================================================
+warning: owned entities 3, 0 collided on cell (4, 14) as the result of moves on this turn
+At command 2 of 4:
+    1   m 4 o
+>>> 2   m 3 s
+    3   m 9 o
+    4   m 7 o
+
+
+Turn 192
+================================================================
+warning: owned entities 27, 14 collided on cell (8, 17) as the result of moves on this turn
+At command 5 of 5:
+    3   m 15 s
+    4   m 22 o
+>>> 5   m 27 s
+

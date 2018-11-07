@@ -1,0 +1,28 @@
+
+Turn 13
+================================================================
+warning: owned entities 3, 0 collided on cell (8, 12) as the result of moves on this turn
+At command 3 of 5:
+    1   m 5 n
+    2   m 0 o
+>>> 3   m 3 n
+    4   m 7 o
+    5   g
+
+
+Turn 76
+================================================================
+warning: owned entities 5, 9 collided on cell (9, 16) as the result of moves on this turn
+At command 3 of 3:
+    1   m 7 e
+    2   m 9 o
+>>> 3   m 5 w
+
+
+Turn 98
+================================================================
+warning: owned entities 14, 7 collided on cell (9, 16) as the result of moves on this turn
+At command 2 of 2:
+    1   m 7 o
+>>> 2   m 14 e
+

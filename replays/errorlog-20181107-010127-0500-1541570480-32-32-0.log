@@ -1,0 +1,20 @@
+
+Turn 33
+================================================================
+warning: owned entities 9, 5 collided on cell (9, 16) as the result of moves on this turn
+At command 5 of 6:
+    3   m 5 o
+    4   m 7 o
+>>> 5   m 9 s
+    6   m 10 o
+
+
+Turn 50
+================================================================
+warning: owned entities 3, 0 collided on cell (8, 16) as the result of moves on this turn
+At command 2 of 5:
+    1   m 0 o
+>>> 2   m 3 e
+    3   m 7 o
+    4   m 10 o
+

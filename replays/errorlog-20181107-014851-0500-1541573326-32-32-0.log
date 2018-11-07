@@ -1,0 +1,51 @@
+
+Turn 115
+================================================================
+warning: owned entities 3, 14 collided on cell (8, 31) as the result of moves on this turn
+At command 6 of 15:
+    4   m 14 o
+    5   m 16 o
+>>> 6   m 3 n
+    7   m 9 n
+    8   m 11 n
+
+
+Turn 119
+================================================================
+warning: owned entities 24, 23 collided on cell (8, 31) as the result of moves on this turn
+At command 12 of 13:
+    10   m 20 o
+    11   m 21 n
+>>> 12   m 24 n
+    13   m 29 s
+
+
+Turn 123
+================================================================
+warning: owned entities 26, 9 collided on cell (8, 31) as the result of moves on this turn
+At command 10 of 11:
+    8   m 20 n
+    9   m 21 n
+>>> 10   m 26 n
+    11   m 29 s
+
+
+Turn 230
+================================================================
+warning: owned entities 47, 21 collided on cell (23, 31) as the result of moves on this turn
+At command 17 of 17:
+    15   m 37 n
+    16   m 39 w
+>>> 17   m 47 n
+
+
+Turn 238
+================================================================
+warning: owned entities 32, 7 collided on cell (23, 31) as the result of moves on this turn
+At command 11 of 15:
+    9   m 16 s
+    10   m 20 n
+>>> 11   m 32 n
+    12   m 37 n
+    13   m 39 s
+

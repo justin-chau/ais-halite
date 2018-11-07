@@ -1,0 +1,11 @@
+
+Turn 180
+================================================================
+warning: owned entities 25, 15 collided on cell (9, 31) as the result of moves on this turn
+At command 4 of 8:
+    2   m 0 o
+    3   m 5 o
+>>> 4   m 25 n
+    5   m 9 o
+    6   m 3 o
+

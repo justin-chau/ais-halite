@@ -1,0 +1,96 @@
+
+Turn 69
+================================================================
+warning: owned entities 5, 16 collided on cell (6, 15) as the result of moves on this turn
+At command 7 of 10:
+    5   m 18 o
+    6   m 15 o
+>>> 7   m 5 s
+    8   m 7 n
+    9   m 12 o
+
+
+Turn 98
+================================================================
+warning: owned entities 13, 24 collided on cell (11, 16) as the result of moves on this turn
+At command 6 of 11:
+    4   m 7 e
+    5   m 9 n
+>>> 6   m 13 s
+    7   m 15 s
+    8   m 18 e
+
+
+Turn 120
+================================================================
+warning: owned entities 7, 22 collided on cell (13, 14) as the result of moves on this turn
+At command 11 of 14:
+    9   m 34 o
+    10   m 31 o
+>>> 11   m 7 n
+    12   m 22 o
+    13   m 25 n
+
+
+Turn 135
+================================================================
+warning: owned entities 9, 38 collided on cell (12, 14) as the result of moves on this turn
+At command 9 of 13:
+    7   m 0 e
+    8   m 3 o
+>>> 9   m 9 s
+    10   m 15 e
+    11   m 18 s
+
+
+Turn 195
+================================================================
+warning: owned entities 31, 29 collided on cell (31, 8) as the result of moves on this turn
+At command 8 of 17:
+    6   m 18 s
+    7   m 25 s
+>>> 8   m 31 w
+    9   m 32 e
+    10   m 34 s
+
+
+Turn 201
+================================================================
+warning: owned entities 50, 0 collided on cell (31, 8) as the result of moves on this turn
+At command 12 of 15:
+    10   m 41 e
+    11   m 43 s
+>>> 12   m 50 w
+    13   m 51 o
+    14   m 52 e
+
+
+Turn 204
+================================================================
+warning: owned entities 12, 52 collided on cell (16, 19) as the result of moves on this turn
+At command 5 of 13:
+    3   m 15 o
+    4   m 36 o
+>>> 5   m 12 e
+    6   m 18 w
+    7   m 25 s
+
+warning: owned entities 18, 43 collided on cell (12, 16) as the result of moves on this turn
+At command 6 of 13:
+    4   m 36 o
+    5   m 12 e
+>>> 6   m 18 w
+    7   m 25 s
+    8   m 32 n
+
+
+Turn 209
+================================================================
+warning: owned entities 36, 54 collided on cell (15, 19) as the result of moves on this turn
+At command 6 of 9:
+    4   m 25 e
+    5   m 32 w
+>>> 6   m 36 e
+    7   m 41 o
+    8   m 54 o
+

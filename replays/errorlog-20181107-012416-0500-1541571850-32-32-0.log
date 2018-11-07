@@ -1,0 +1,48 @@
+
+Turn 73
+================================================================
+warning: entity 13 was directed to use 5 halite to move west, but only 3 halite was available
+At command 7 of 7:
+    5   m 9 s
+    6   m 11 o
+>>> 7   m 13 w
+
+warning: owned entities 8, 13 collided on cell (10, 16) as the result of moves on this turn
+At command 4 of 7:
+    2   m 3 o
+    3   m 5 o
+>>> 4   m 8 s
+    5   m 9 s
+    6   m 11 o
+
+
+Turn 129
+================================================================
+warning: owned entities 17, 3 collided on cell (8, 31) as the result of moves on this turn
+At command 7 of 8:
+    5   m 11 s
+    6   m 15 n
+>>> 7   m 17 n
+    8   m 19 n
+
+
+Turn 144
+================================================================
+warning: owned entities 19, 0 collided on cell (8, 31) as the result of moves on this turn
+At command 6 of 7:
+    4   m 11 w
+    5   m 15 o
+>>> 6   m 19 n
+    7   m 22 s
+
+
+Turn 328
+================================================================
+warning: owned entities 25, 15 collided on cell (31, 0) as the result of moves on this turn
+At command 5 of 7:
+    3   m 11 o
+    4   m 15 o
+>>> 5   m 25 w
+    6   m 28 s
+    7   m 31 w
+
