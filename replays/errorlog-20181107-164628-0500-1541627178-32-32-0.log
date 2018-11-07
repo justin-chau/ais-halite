@@ -1,0 +1,11 @@
+
+Turn 191
+================================================================
+warning: owned entities 4, 58 collided on cell (8, 16) as the result of moves on this turn
+At command 16 of 26:
+    14   m 50 o
+    15   m 52 o
+>>> 16   m 4 w
+    17   m 11 o
+    18   m 21 n
+

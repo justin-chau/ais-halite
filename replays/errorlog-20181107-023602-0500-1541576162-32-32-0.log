@@ -1,0 +1,10 @@
+
+Turn 1
+================================================================
+error: communication error with bot: Problem writing to pipe, errno was: 0 (No error)
+Last input received was:
+
+    if and cell.position is not ship.position and cell.position not in current_targets:
+         ^
+SyntaxError: invalid syntax
+

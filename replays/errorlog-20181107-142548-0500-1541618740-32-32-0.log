@@ -1,0 +1,8 @@
+
+Turn 220
+================================================================
+error: failed to decode bot message: "T" (at position 1)
+Last input received was:
+Traceback (most recent call last):
+  File "MyBot.py", line 172, in <module>
+    if next_adj_positions[ship_id] == ship_paths[shi
